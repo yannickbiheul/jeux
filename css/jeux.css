@@ -1,0 +1,313 @@
+/* GENERAL */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--bleu-nuit);
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    /* COULEURS */
+    --bleu: rgba(0, 151, 230, 1.0);
+    --violet: rgba(140, 122, 230, 1.0);
+    --jaune: rgba(225, 177, 44, 1.0);
+    --vert: rgba(68, 189, 50, 1.0);
+    --turquoise: rgba(64, 115, 158, 1.0);
+    --rouge: rgba(194, 54, 22, 1.0);
+    --blanc: rgba(245, 246, 250, 1.0);
+    --gris: rgba(113, 128, 147, 1.0);
+    --bleu-nuit: rgba(25, 42, 86, 1.0);
+    --noir: rgba(47, 54, 64, 1.0);
+}
+
+/* NAV */
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 60px;
+    background-color: var(--noir);
+    box-shadow: 0 4px 4px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+/* BURGER */
+.boutonBurger {
+    position: fixed;
+    top: 15px;
+    left: 10px;
+    width: 40px;
+    height: 30px;
+    /* border: 1px solid var(--blanc); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    z-index: 15;
+}
+
+.boutonBurger>span {
+    height: 5px;
+    width: 100%;
+    background-color: var(--blanc);
+}
+
+.menuBurger {
+    position: fixed;
+    left: -100vw;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bleu-nuit);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.5s;
+    color: var(--blanc);
+}
+
+.menuBurgerOpen {
+    left: 0;
+}
+
+.menuBurger2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 99%;
+    height: 40%;
+    /* border: 1px solid #fff; */
+}
+
+.statsJoueur {
+    width: 99%;
+    height: 100%;
+}
+
+.stats {
+    width: 100%;
+    height: 75%;
+    /* border: 1px solid #fff; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.suppr {
+    width: 100%;
+    height: 25%;
+    /* border: 1px solid #fff; */
+}
+
+.menuBurger3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 99%;
+    height: 60%;
+    /* border: 1px solid #fff; */
+}
+
+/* CARTE SUPPR */
+.carteSuppr {
+    position: absolute;
+    top: 30vh;
+    left: -300px;;
+    width: 250px;
+    height: 250px;
+    z-index: 14;
+    background-color: var(--noir);
+    color: var(--blanc);
+    padding: 5px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px #000;
+    transition-duration: 0.5s;
+}
+
+.carteSuppr1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+.carteSuppr2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+/* MAIN */
+main {
+    /* border: 1px solid var(--blanc); */
+    width: 99vw;
+    height: calc(100vh - 130px);
+    margin: auto;
+    margin-top: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARTE */
+.carte {
+    background-color: rgba(25, 42, 86, 0.6);
+    width: 95%;
+    height: 95%;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--blanc);
+}
+
+.erreur {
+    padding: 5px;
+    height: 40px;
+    color: var(--rouge);
+}
+
+/* TITRE */
+.titre {
+    /* border: 1px solid #fff; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+    height: 80px;
+    padding: 0 20px 0 20px;
+    text-align: center;
+}
+
+.titre>h1 {
+    font-family: 'Aladin', cursive;
+    letter-spacing: 2px;
+    font-size: 2.8em;
+}
+
+.titre>h2 {
+    font-family: 'Aladin', cursive;
+    letter-spacing: 2px;
+    font-size: 2em;
+}
+
+.titre>h1:hover {
+    font-size: 3.2em;
+}
+
+/* PARAGRAPHE */
+.paragraphe {
+    /* border: 1px solid #fff; */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.paragraphe>p:hover {
+    color: var(--jaune);
+}
+
+/* INPUT */
+.input {
+    /* border: 1px solid #fff; */
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.input>input {
+    width: 95%;
+    height: 95%;
+    border-radius: 5px;
+    border: var(--blanc);
+    box-shadow: 4px 4px 4px #000;
+    outline: none;
+}
+
+/* BOUTON */
+.bouton {
+    min-width: 60px;
+    min-height: 60px;
+    /* border: 1px solid #fff; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bouton>a {
+    text-decoration: none;
+    color: var(--blanc);
+    background-color: var(--rouge);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px #000;
+}
+
+.bouton>a:hover {
+    padding: 12px;
+    font-size: 1.1em;
+    box-shadow: 4px 4px 4px #000;
+}
+
+.bouton>a:active {
+    padding: 8px;
+    font-size: 0.9em;
+    box-shadow: 2px 2px 4px #000;
+}
+
+/* BOUTON JEU */
+.boutonJeu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.boutonJeu>a {
+    text-decoration: none;
+    color: var(--blanc);
+    background-color: var(--bleu);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px #000;
+}
+
+/* FOOTER */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 60px;
+    background-color: var(--noir);
+    box-shadow: 0 4px 4px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--blanc);
+}
